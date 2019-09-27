@@ -5,7 +5,7 @@ import requests
 def parse():
     URL = 'http://base.garant.ru/10108000/'
     r= requests.get(URL)
-    handle = open("articles.txt","w")
+    handle = open("articles.txt","w",encoding='utf-8')
     soup = BeautifulSoup(r.content,'lxml')
     lis = soup.findAll("li", {"class": "no_img statya"})
     for li in lis:
@@ -14,14 +14,7 @@ def parse():
 
 def get():
     articles = []
-    f = open('power.txt')
+    f = open('articles.txt', encoding='utf-8')
     for line in f.readlines():
         articles.append(line)
-    print(articles)
-
-
-articles = []
-f = open('articles.txt')
-for line in f.readlines():
-    articles.append(line)
-print(articles)
+    return articles
