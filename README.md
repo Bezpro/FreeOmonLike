@@ -28,6 +28,8 @@ GROUP_ID = 'your group id'
 ```bash
 cd *your_path*/FreeOmonLike
 
+Python3.7 articles.py #download ariticles
+
 Python3.7 bot.py
 ```
 
