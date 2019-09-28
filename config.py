@@ -1,2 +1,2 @@
-TOKEN = '4b9c5d15dccdf4e752a73dd2bbbc141918af2e8526fa712aa34976c0bf78933403f44d52ef15eb215a3bb'
-GROUP_ID = '186985350'
+TOKEN = 'your token'
+GROUP_ID = 'your group id'
