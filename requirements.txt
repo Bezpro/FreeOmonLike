@@ -1,0 +1,4 @@
+vk_api
+opencv-python
+Pillow
+beautifulsoup4

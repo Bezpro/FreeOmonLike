@@ -7,7 +7,7 @@ import collections
 import random
 import io
 
-from articles import get
+from articles import *
 
 def set_omon_free(url):
     faceCascade = cv.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
@@ -16,7 +16,7 @@ def set_omon_free(url):
     gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(img,1.2,5,minSize=(20,20))
     Coords = collections.namedtuple('Coord',['x','y'])
-
+    parse()
     articles = get()
     xcoord = []
     ycoord = []
