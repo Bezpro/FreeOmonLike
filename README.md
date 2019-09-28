@@ -31,5 +31,9 @@ cd *your_path*/FreeOmonLike
 Python3.7 bot.py
 ```
 
+## How to use
+
+Write a message with the text "OMON" and attach the image
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
