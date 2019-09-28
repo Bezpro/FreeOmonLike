@@ -4,19 +4,19 @@ Bot for VK like @FreeOmonBot in Telegram
 
 ## Installation
 
-Install Python3.7
+1) Install Python3.7
 
-Clone this repository
+2) Clone this repository
 
-Run:
+3) Run:
 
 ```bash
 python3.7 -m pip -r requirements.txt
 ```
 
-Go to your VK-group and create TOKEN. Then turn on Long Poll API ang set API version 5.80. 
+4) Go to your VK-group and create TOKEN. Then turn on Long Poll API ang set API version 5.80. 
 
-Change config.py file
+5) Change config.py file
 
 ```python
 TOKEN = 'your token'
