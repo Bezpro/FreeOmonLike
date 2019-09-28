@@ -16,7 +16,6 @@ def set_omon_free(url):
     gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(img,1.2,5,minSize=(20,20))
     Coords = collections.namedtuple('Coord',['x','y'])
-    parse()
     articles = get()
     xcoord = []
     ycoord = []
@@ -38,7 +37,7 @@ def set_omon_free(url):
 
     draw.rectangle(((0,height-((fontsize2+5)*len(xcoord))),(width,height)),fill='black')
     for i in range(len(xcoord)):
-        text = articles[random.randrange(0,len(articles),1)]
+        text = articles[random.randrange(100,len(articles),1)]
         title = text[:text.rfind('.')]
         draw.text((xcoord[i],ycoord[i]-fontsize1-10),title,(10,252,10),font=font1)
         draw.text((10,height-((i+1)*(fontsize2+5))),text,(10,252,10),font=font2)

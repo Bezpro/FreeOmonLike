@@ -9,7 +9,9 @@ def parse():
     soup = BeautifulSoup(r.content,'lxml')
     lis = soup.findAll("li", {"class": "no_img statya"})
     for li in lis:
-        handle.write(li.find('a').contents[0]+'\n')
+        text = li.find('a').contents[0]
+        if 'утратила силу' not in text:
+            handle.write(text+'\n')
     handle.close()
 
 def get():
@@ -18,3 +20,5 @@ def get():
     for line in f.readlines():
         articles.append(line)
     return articles
+
+parse()
