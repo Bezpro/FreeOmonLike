@@ -23,7 +23,6 @@ def main():
                             send_message(user_id,'ВЫ забыли прикрепить изображение')
 
                     
-
 def send_message(user_id,message=None,keyboard=None,attachment=None):
     api.messages.send(user_id=user_id, message = message, random_id = get_random_id(),keyboard=keyboard,attachment=attachment,dont_parse_links=1)
 
