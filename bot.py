@@ -13,11 +13,11 @@ def main():
         for event in longpoll.listen():
                 if event.type == VkBotEventType.MESSAGE_NEW:
                     text = event.obj.text.lower()
+                    user_id = event.obj.from_id
                     if text =='омон' or text =='omon':
                         if event.obj.attachments != [] and event.obj.attachments[0]['type'] =='photo':
                             url = get_max_size_image_url(event.obj.attachments[0]['photo']['sizes'])
                             img = imagehelper.set_omon_free(url)
-                            user_id = event.obj.from_id
                             send_message(user_id,attachment=prepare_attachment(img))
                         else:
                             send_message(user_id,'ВЫ забыли прикрепить изображение')
